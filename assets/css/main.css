@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: black; 
+  margin-top: 50px;
+}
+
+header {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 10000;
+  top: 0;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+
+.gallery-item {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 400px; 
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.gallery-item img{
+  position: relative;
+  z-index: 10;
+  transition: 0.2s;
+}
+
+#item-1:hover img{
+  transform: translateX(-100%);
+}
+
+#item-2:hover img{
+  transform: rotate(45deg);
+  opacity: 0.5;
+}
+
+#item-3:hover img{
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+
+#item-4:hover img{
+  transform: skew(0deg, 30deg);
+}
+
+#item-5:hover img{
+  transform: skew(0deg, 30deg) translateY(130%);
+}
+
+#item-6:hover img{
+   transform: rotate(45deg) translateX(80%);
+   opacity: 0;
+}
+
+#item-7:hover img{
+  transform: skew(0deg, 30deg) scale(1.5) translateY(130%) rotate(45deg);
+}
+
+#item-8:hover img{
+  border-radius:50%;
+  opacity: 0.5;
+}
+
+.gallery-item p{
+  position: absolute;
+  color: white;
+  top: 50%;
+  width: 100%;
+}
